@@ -1,6 +1,7 @@
 ﻿namespace UserManagementApp.Services
 {
-    public class service_a
+    public class ServiceA
     {
+        //this is servcie a
     }
 }
