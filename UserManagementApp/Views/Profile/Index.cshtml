@@ -1,0 +1,31 @@
+﻿@model UserProfileViewModel
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+
+        <div class="card profile-card p-4">
+
+            <h3 class="fw-semibold mb-3">Profile</h3>
+
+            <div class="mb-2">
+                <strong>Username:</strong> @Model.Username
+            </div>
+
+            <div class="mb-2">
+                <strong>Email:</strong> @Model.Email
+            </div>
+
+            <div class="mb-4">
+                <strong>Status:</strong>
+                <span class="badge bg-success">@Model.Status</span>
+            </div>
+
+            <a asp-action="Edit"
+               class="btn btn-outline-primary">
+                Edit Profile
+            </a>
+
+        </div>
+
+    </div>
+</div>

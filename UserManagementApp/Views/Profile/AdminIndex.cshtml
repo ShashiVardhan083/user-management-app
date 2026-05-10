@@ -1,0 +1,31 @@
+﻿@model List<UserManagementApp.Models.Entities.User>
+
+<h3 class="mb-4">User Profiles</h3>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Username</td>
+                <td>@user.Email</td>
+                <td>@user.Role</td>
+                <td>
+                    <a asp-action="Edit"
+                       asp-route-id="@user.Id"
+                       class="btn btn-sm btn-outline-primary">
+                        Edit
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
