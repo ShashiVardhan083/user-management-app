@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using UserManagementApp.Data;
+using UserManagementApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +20,7 @@ builder.Services.AddAuthentication("Cookies")
 
 builder.Services.AddAuthorization();
 
+builder.Services.AddScoped<ServiceA>();
 var app = builder.Build();
 
 app.UseStaticFiles();
